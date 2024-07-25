@@ -1,0 +1,108 @@
+/* General styles for the whole page */
+html, body {
+    height: 100%; /* Full height of the viewport */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+.header {
+    background-color: #4A2C2A; /* UPS Brown */
+    color: white;
+    padding: 10px 20px; /* Horizontal and vertical padding */
+    display: flex;
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Align items vertically */
+}
+
+.header .left-side, .header .right-side {
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    height: 60px; /* Logo size */
+    margin-right: 15px; /* Space between logo and title */
+}
+
+.header .right-side .btn-primary {
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #FFB500; /* UPS Gold */
+    border-color: #FFA500; /* Slightly darker gold for the border */
+    font-weight: bold;
+}
+
+/* Main container styles */
+.container {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff; /* White background */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #4A2C2A; /* UPS Brown */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Table styles for responsiveness */
+.table-responsive {
+    overflow-x: auto; /* Allows table to scroll horizontally on small devices */
+}
+
+.table {
+    width: 100%; /* Full width */
+    margin-top: 20px;
+    border-collapse: collapse; /* Ensure borders are nice and tight */
+}
+
+.thead-dark {
+    background-color: #4A2C2A; /* UPS Brown */
+    color: white;
+}
+
+.table th, .table td {
+    border: 1px solid #dee2e6; /* Light grey borders for clarity */
+    padding: 8px; /* Padding for table cells */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #ffeeba; /* Light yellow for hover */
+}
+
+/* Pagination and description styles */
+.pagination a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    background-color: #4A2C2A; /* UPS Brown */
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.pagination a:hover:not(.disabled) {
+    background-color: #FFB500; /* UPS Gold for hover effect */
+}
+
+.descriptions p {
+    background-color: #f8f9fa; /* Light grey background for descriptions */
+    border-left: 5px solid #FFB500; /* UPS Gold line for emphasis */
+    padding: 10px;
+    margin-top: 5px;
+}

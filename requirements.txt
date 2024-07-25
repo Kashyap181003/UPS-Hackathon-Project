@@ -1,0 +1,7 @@
+Flask
+beautifulsoup4
+selenium
+pandas
+flask-session
+google-cloud-firestore
+google-cloud-aiplatform

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Enter URL{% endblock %}
+
+{% block content %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+<div class="my-5">
+    <h2>Enter Product URL</h2>
+    <form action="{{ url_for('process_url') }}" method="post" class="form-inline">
+        <input type="url" name="productUrl" class="form-control mb-2 mr-sm-2" id="productUrl" placeholder="https://example.com/product" required>
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+</div>
+{% endblock %}

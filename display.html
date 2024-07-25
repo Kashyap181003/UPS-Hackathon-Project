@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Display Data{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Data from Firestore</h2>
+    <!-- Button for downloading Excel file -->
+    <div class="mb-3">
+        <a href="{{ url_for('download_excel') }}" class="btn btn-success">Download Excel File</a>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    {% if products %}
+                    {% for key in products[0].keys() %}
+                        <th scope="col">{{ key }}</th>
+                    {% endfor %}
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    {% for key in products[0].keys() %}
+                        <td>{{ product[key] if key in product else '' }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
